@@ -1,0 +1,158 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Consolas, Monaco, sans-serif, "Times New Roman";
+}
+
+/**** Main heading ****/
+#page_header{
+    text-transform: uppercase;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    height: 15vh;
+}
+
+
+header, h2{
+    font-size: 4vmax;   /* for dynamic text resizing */
+    text-align: center;
+}
+
+#upload_prompt{
+    margin: 0% 10%;    /* left-right 5% top-bottom 0% */
+    height: 15vh;
+    font-size: 1.4rem;
+    font-weight: bolder;
+}
+
+h3, h4{
+    margin: 0px;
+}
+
+#upload_btn{
+    float: right;
+}
+
+/* no styling can be done on browse button*/
+#browse_btn{
+    visibility: hidden;
+}
+
+/**** confirmation view with image preview ****/
+
+#close_button{
+    border: none;
+    background-color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    float:right;
+}
+
+#confirmation_view{
+    position: fixed;
+
+    /* offsets */
+    left: 5%;
+    right: 5%;
+    top: 14%;
+    bottom: 10%;
+
+    /* make div scrollable on overflow */
+    overflow: auto;
+
+    /* floating effects */
+    z-index: 1;
+    visibility: hidden;
+    background-color: black;
+}
+
+.preview_box{
+    position: relative;
+    border: 1px solid white;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.preview_image{
+    position: relative;
+    width: 40%;
+    height: 50%;
+}
+
+.user_input{
+    position: absolute;
+    right: 2rem;
+    left: 50%;
+    top: 2rem;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    rows: 4;
+    border-radius: 4px;
+}
+
+.remove_btn{
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+
+#upload_button_container{
+    text-align: center;
+}
+
+/****  Main view with radio buttons and images ****/
+
+#user_view{
+    position: relative;
+    margin: 2% 0%;  /* left right margin 2% */
+}
+
+#img_selection_view{
+    position: relative;
+    overflow: auto;
+    margin-left: 10%;
+    width: 30%;
+    height: 50vh;
+    text-align: left;
+    border: 2px white;
+}
+
+#img_view{
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    /* size of the image to display */
+    width: 500px;
+    height: 320px;
+}
+
+
+/**** button design ****/
+#upload_btn, #form_upload_btn, .remove_btn{
+    background-color: white;
+    margin: 1rem;
+    border: 2px solid white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin: 1rem;
+}
+
+#upload_btn, #closeButton, #form_upload_btn, .remove_btn{
+    cursor: pointer;
+}
+
+/**** border for elements ****/
+#upload_prompt, #img_selection_view, #confirmation_view, .preview_box{
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 2px;
+}
